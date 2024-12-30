@@ -1,0 +1,31 @@
+include: package:very_good_analysis/analysis_options.yaml
+linter:
+  rules:
+    sort_pub_dependencies: false
+    overridden_fields: false
+    depend_on_referenced_packages: false
+    require_trailing_commas: false
+    always_declare_return_types: true
+    cancel_subscriptions: true
+    close_sinks: true
+    comment_references: true
+    one_member_abstracts: false
+    only_throw_errors: true
+    package_api_docs: true
+    prefer_final_in_for_each: true
+    prefer_single_quotes: true
+    always_use_package_imports: false
+    public_member_api_docs: false
+    sort_constructors_first: false
+    avoid_dynamic_calls: false
+    lines_longer_than_80_chars: false
+analyzer:
+  exclude: [build/**, lib/**.g.dart, lib/**.freezed.dart, test/**.mocks.dart]
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    camel_case_types: error
+    prefer_const_constructors: error
+    unnecessary_statements: error

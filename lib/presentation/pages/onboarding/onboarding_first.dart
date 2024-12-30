@@ -6,8 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/core.dart';
 import '../../widgets/widgets.dart';
 
-class OnboardingSecond extends StatelessWidget {
-  const OnboardingSecond({super.key});
+class OnboardingFirst extends StatelessWidget {
+  const OnboardingFirst({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class OnboardingSecond extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 2),
-              SvgPicture.asset(AppImage.teamPlanningBoard),
+              SvgPicture.asset(AppImage.manWithWatch),
               const SizedBox(height: 50),
               Padding(
                 padding:
@@ -42,16 +42,6 @@ class OnboardingSecond extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: 26,
-                      height: 4,
-                      decoration: const BoxDecoration(
-                        color: Color(0xffAFAFAF),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(56),
-                        ),
-                      ),
-                    ),
                     Container(
                       width: 26,
                       height: 4,
@@ -72,11 +62,21 @@ class OnboardingSecond extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Container(
+                      width: 26,
+                      height: 4,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffAFAFAF),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(56),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
               Text(
-                'Create daily routine',
+                'Manage your task',
                 style: GoogleFonts.lato(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class OnboardingSecond extends StatelessWidget {
               const SizedBox(height: 42),
               Text(
                 textAlign: TextAlign.center,
-                'In Uptodo  you can create your\npersonalized routine to stay productive',
+                'You can easily manege all of your daily\ntask in DoMe for free',
                 style: GoogleFonts.lato(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -97,18 +97,12 @@ class OnboardingSecond extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(
-                    height: 48,
-                    child: SecondaryButtonWidget(
-                      title: 'BACK',
-                      onPressed: () => context.go(AppRoute.onboardingFirst),
-                    ),
-                  ),
+                  const SizedBox.shrink(),
                   SizedBox(
                     height: 48,
                     child: PrimaryButtonWidget(
                       title: 'NEXT',
-                      onPressed: () => context.go(AppRoute.onboardingThird),
+                      onPressed: () => context.go(AppRoute.onboardingSecond),
                     ),
                   ),
                 ],

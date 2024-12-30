@@ -6,8 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/core.dart';
 import '../../widgets/widgets.dart';
 
-class OnboardingOne extends StatelessWidget {
-  const OnboardingOne({super.key});
+class OnboardingThird extends StatelessWidget {
+  const OnboardingThird({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class OnboardingOne extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 2),
-              SvgPicture.asset(AppImage.manWithWatch),
+              SvgPicture.asset(AppImage.taskChecklist),
               const SizedBox(height: 50),
               Padding(
                 padding:
@@ -46,27 +46,27 @@ class OnboardingOne extends StatelessWidget {
                       width: 26,
                       height: 4,
                       decoration: const BoxDecoration(
+                        color: Color(0xffAFAFAF),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(56),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 26,
+                      height: 4,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffAFAFAF),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(56),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 26,
+                      height: 4,
+                      decoration: const BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(56),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 26,
-                      height: 4,
-                      decoration: const BoxDecoration(
-                        color: Color(0xffAFAFAF),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(56),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 26,
-                      height: 4,
-                      decoration: const BoxDecoration(
-                        color: Color(0xffAFAFAF),
                         borderRadius: BorderRadius.all(
                           Radius.circular(56),
                         ),
@@ -76,7 +76,7 @@ class OnboardingOne extends StatelessWidget {
                 ),
               ),
               Text(
-                'Manage your task',
+                'Orgonaize your tasks',
                 style: GoogleFonts.lato(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class OnboardingOne extends StatelessWidget {
               const SizedBox(height: 42),
               Text(
                 textAlign: TextAlign.center,
-                'You can easily manege all of your daily\ntask in DoMe for free',
+                'You can organize your daily tasks by\nadding your tasks into separate categories',
                 style: GoogleFonts.lato(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -101,14 +101,14 @@ class OnboardingOne extends StatelessWidget {
                     height: 48,
                     child: SecondaryButtonWidget(
                       title: 'BACK',
-                      onPressed: () {},
+                      onPressed: () => context.go(AppRoute.onboardingSecond),
                     ),
                   ),
                   SizedBox(
                     height: 48,
                     child: PrimaryButtonWidget(
                       title: 'NEXT',
-                      onPressed: () => context.go(AppRoute.onboardingSecond),
+                      onPressed: () {},
                     ),
                   ),
                 ],

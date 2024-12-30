@@ -8,7 +8,7 @@ class AppRoute {
   static String onboardingSecond = '/onboarding_second';
 
   static GoRouter goRouter = GoRouter(
-    initialLocation: AppRoute.onboardingSecond,
+    initialLocation: AppRoute.onboardingOne,
     routes: [
       GoRoute(
         path: AppRoute.splash,

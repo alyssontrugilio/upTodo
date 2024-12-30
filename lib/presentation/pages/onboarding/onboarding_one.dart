@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/core.dart';
@@ -13,6 +14,7 @@ class OnboardingOne extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xff121212),
       body: SafeArea(
+        bottom: false,
         child: Padding(
           padding: const EdgeInsets.only(
             top: 14,
@@ -24,12 +26,10 @@ class OnboardingOne extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(
-                    'SKIP',
-                    style: GoogleFonts.lato(
-                      fontSize: 16,
-                      color: const Color(0xFFFFFFFF).withOpacity(0.44),
-                    ),
+                  SecondaryButtonWidget(
+                    title: 'SKIP',
+                    onPressed: () {},
+                    colorFont: const Color(0xFFFFFFFF).withOpacity(0.44),
                   ),
                 ],
               ),
@@ -83,6 +83,7 @@ class OnboardingOne extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+              const SizedBox(height: 42),
               Text(
                 textAlign: TextAlign.center,
                 'You can easily manege all of your daily\ntask in DoMe for free',
@@ -107,7 +108,7 @@ class OnboardingOne extends StatelessWidget {
                     height: 48,
                     child: PrimaryButtonWidget(
                       title: 'NEXT',
-                      onPressed: () {},
+                      onPressed: () => context.go(AppRoute.onboardingSecond),
                     ),
                   ),
                 ],

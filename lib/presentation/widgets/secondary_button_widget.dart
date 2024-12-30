@@ -4,8 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 class SecondaryButtonWidget extends StatelessWidget {
   final String title;
   final void Function()? onPressed;
+  final Color? colorFont;
   const SecondaryButtonWidget({
     required this.title,
+    this.colorFont,
     super.key,
     this.onPressed,
   });
@@ -30,6 +32,7 @@ class SecondaryButtonWidget extends StatelessWidget {
         title,
         style: GoogleFonts.lato(
           fontSize: 16,
+          color: colorFont,
         ),
       ),
     );

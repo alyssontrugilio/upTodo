@@ -15,6 +15,8 @@ class OnboardingSecond extends StatelessWidget {
       backgroundColor: const Color(0xff121212),
       body: SafeArea(
         bottom: false,
+        left: false,
+        right: false,
         child: Padding(
           padding: const EdgeInsets.only(
             top: 14,
@@ -28,7 +30,7 @@ class OnboardingSecond extends StatelessWidget {
                 children: [
                   SecondaryButtonWidget(
                     title: 'SKIP',
-                    onPressed: () {},
+                    onPressed: () => context.go(AppRoute.startScreen),
                     colorFont: const Color(0xFFFFFFFF).withOpacity(0.44),
                   ),
                 ],

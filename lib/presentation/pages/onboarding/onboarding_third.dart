@@ -15,6 +15,8 @@ class OnboardingThird extends StatelessWidget {
       backgroundColor: const Color(0xff121212),
       body: SafeArea(
         bottom: false,
+        left: false,
+        right: false,
         child: Padding(
           padding: const EdgeInsets.only(
             top: 14,
@@ -28,7 +30,7 @@ class OnboardingThird extends StatelessWidget {
                 children: [
                   SecondaryButtonWidget(
                     title: 'SKIP',
-                    onPressed: () {},
+                    onPressed: () => context.go(AppRoute.startScreen),
                     colorFont: const Color(0xFFFFFFFF).withOpacity(0.44),
                   ),
                 ],
@@ -108,7 +110,7 @@ class OnboardingThird extends StatelessWidget {
                     height: 48,
                     child: PrimaryButtonWidget(
                       title: 'NEXT',
-                      onPressed: () {},
+                      onPressed: () => context.go(AppRoute.startScreen),
                     ),
                   ),
                 ],

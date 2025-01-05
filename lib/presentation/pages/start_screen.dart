@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../core/core.dart';
 import '../widgets/widgets.dart';
 
 class StartScreenPage extends StatelessWidget {
@@ -26,7 +28,7 @@ class StartScreenPage extends StatelessWidget {
               Row(
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => context.go(AppRoute.onboardingThird),
                     icon: const Icon(
                       Icons.arrow_back_ios_new_rounded,
                       color: Colors.white,
@@ -98,7 +100,7 @@ class StartScreenPage extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () => context.go(AppRoute.signUp),
                     ),
                   ),
                 ],

@@ -27,5 +27,6 @@ analyzer:
     strict-raw-types: true
   errors:
     camel_case_types: error
+    deprecated_member_use: ignore
     prefer_const_constructors: error
     unnecessary_statements: error
